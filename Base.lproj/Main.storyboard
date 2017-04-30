@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JHj-8t-SrM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Emoji_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Emoji_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -34,17 +34,20 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sI0-td-cZw" secondAttribute="bottom" id="uBO-uj-41z"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="vZZ-Xc-tzz"/>
                     <connections>
                         <outlet property="daCoolTableView" destination="sI0-td-cZw" id="eaD-ys-Uh4"/>
+                        <segue destination="jZF-lf-d2s" kind="show" identifier="moveSeque" id="erI-YO-e9U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="972" y="37.331334332833585"/>
         </scene>
-        <!--View Controller-->
+        <!--Definition View Controller-->
         <scene sceneID="iL7-s3-03c">
             <objects>
-                <viewController id="jZF-lf-d2s" sceneMemberID="viewController">
+                <viewController id="jZF-lf-d2s" customClass="DefinitionViewController" customModule="Emoji_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CNu-7y-fsD"/>
                         <viewControllerLayoutGuide type="bottom" id="vIm-TH-deS"/>
@@ -79,10 +82,32 @@
                             <constraint firstItem="IxV-U8-DOv" firstAttribute="centerX" secondItem="eEK-ib-Skf" secondAttribute="centerX" id="oha-cU-tJl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="definitionLabel" destination="IxV-U8-DOv" id="1i2-GK-MoY"/>
+                        <outlet property="emojiLabel" destination="cnE-kN-EKc" id="xei-sd-azI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9x0-Ww-RJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="846" y="691"/>
+            <point key="canvasLocation" x="1806" y="36"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Dyw-h2-jiD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JHj-8t-SrM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TMg-60-lTc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zbi-dS-ZXk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lFJ-oa-dM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-68" y="37"/>
         </scene>
     </scenes>
 </document>
